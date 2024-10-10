@@ -1,0 +1,19 @@
+version: '1.1'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+
+  server:
+    image: bharath0218/ecommerce-server
+    container_name: ecommerce-server
+    ports:
+      - '8000:8000'
+
+  client:
+    image: bharath0218/ecommerce-client
+    container_name: ecommerce-client
+    ports:
+      - '3000:3000'
